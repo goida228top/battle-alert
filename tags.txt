@@ -1,0 +1,553 @@
+677:        ctx.fillStyle = `rgba(239, 68, 68, ${0.8 * (1 - progress)})`;
+681:        ctx.fillStyle = `rgba(251, 191, 36, ${0.6 * (1 - progress)})`;
+731:        const text = `${typeName} (${Math.ceil(hovered.health)}/${hovered.maxHealth})`;
+837:          <div className="absolute inset-0 bg-black/60" />
+854:                    className={`flex-1 py-2 font-bold uppercase tracking-wider border transition-all ${selectedFaction === 'SOVIET' ? 'bg-red-900/40 text-red-400 border-red-500 shadow-[inset_0_0_10px_rgba(220,38,38,0.3)]' : 'bg-black/50 text-zinc-500 border-zinc-700 hover:border-zinc-500'}`}
+860:                    className={`flex-1 py-2 font-bold uppercase tracking-wider border transition-all ${selectedFaction === 'ALLIED' ? 'bg-blue-900/40 text-blue-400 border-blue-500 shadow-[inset_0_0_10px_rgba(37,99,235,0.3)]' : 'bg-black/50 text-zinc-500 border-zinc-700 hover:border-zinc-500'}`}
+864:                </div>
+868:                  {selectedFaction === 'SOVIET' ? (
+870:                      <button onClick={() => setSelectedCountry('RUSSIA')} className={`py-1.5 text-[10px] font-bold uppercase border ${selectedCountry === 'RUSSIA' ? 'bg-red-900/30 border-red-500/50 text-red-300' : 'bg-black/40 border-zinc-800 text-zinc-500 hover:border-zinc-600'}`}>Russia</button>
+871:                      <button onClick={() => setSelectedCountry('CUBA')} className={`py-1.5 text-[10px] font-bold uppercase border ${selectedCountry === 'CUBA' ? 'bg-red-900/30 border-red-500/50 text-red-300' : 'bg-black/40 border-zinc-800 text-zinc-500 hover:border-zinc-600'}`}>Cuba</button>
+872:                      <button onClick={() => setSelectedCountry('LIBYA')} className={`py-1.5 text-[10px] font-bold uppercase border ${selectedCountry === 'LIBYA' ? 'bg-red-900/30 border-red-500/50 text-red-300' : 'bg-black/40 border-zinc-800 text-zinc-500 hover:border-zinc-600'}`}>Libya</button>
+873:                      <button onClick={() => setSelectedCountry('IRAQ')} className={`py-1.5 text-[10px] font-bold uppercase border ${selectedCountry === 'IRAQ' ? 'bg-red-900/30 border-red-500/50 text-red-300' : 'bg-black/40 border-zinc-800 text-zinc-500 hover:border-zinc-600'}`}>Iraq</button>
+874:                    </>
+877:                      <button onClick={() => setSelectedCountry('AMERICA')} className={`py-1.5 text-[10px] font-bold uppercase border ${selectedCountry === 'AMERICA' ? 'bg-blue-900/30 border-blue-500/50 text-blue-300' : 'bg-black/40 border-zinc-800 text-zinc-500 hover:border-zinc-600'}`}>America</button>
+878:                      <button onClick={() => setSelectedCountry('BRITAIN')} className={`py-1.5 text-[10px] font-bold uppercase border ${selectedCountry === 'BRITAIN' ? 'bg-blue-900/30 border-blue-500/50 text-blue-300' : 'bg-black/40 border-zinc-800 text-zinc-500 hover:border-zinc-600'}`}>Britain</button>
+879:                      <button onClick={() => setSelectedCountry('FRANCE')} className={`py-1.5 text-[10px] font-bold uppercase border ${selectedCountry === 'FRANCE' ? 'bg-blue-900/30 border-blue-500/50 text-blue-300' : 'bg-black/40 border-zinc-800 text-zinc-500 hover:border-zinc-600'}`}>France</button>
+880:                      <button onClick={() => setSelectedCountry('GERMANY')} className={`py-1.5 text-[10px] font-bold uppercase border ${selectedCountry === 'GERMANY' ? 'bg-blue-900/30 border-blue-500/50 text-blue-300' : 'bg-black/40 border-zinc-800 text-zinc-500 hover:border-zinc-600'}`}>Germany</button>
+881:                      <button onClick={() => setSelectedCountry('KOREA')} className={`py-1.5 text-[10px] font-bold uppercase border col-span-2 ${selectedCountry === 'KOREA' ? 'bg-blue-900/30 border-blue-500/50 text-blue-300' : 'bg-black/40 border-zinc-800 text-zinc-500 hover:border-zinc-600'}`}>Korea</button>
+882:                    </>
+883:                  )}
+884:                </div>
+885:              </div>
+895:                <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent pointer-events-none" />
+908:            </div>
+909:          </div>
+910:        </div>
+911:      )}
+927:        />
+928:      </div>
+933:        <div className="absolute inset-0 pointer-events-none opacity-[0.03] z-50 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%]" />
+939:              {gameState.credits.toLocaleString()}
+941:          </div>
+955:                  <ShieldAlert className="w-4 h-4 text-white" />
+958:              )}
+968:                  <Bomb className="w-4 h-4 text-white" />
+971:              )}
+981:                  <Activity className="w-4 h-4 text-white" />
+984:              )}
+994:                  <Wind className="w-4 h-4 text-white" />
+997:              )}
+998:            </div>
+999:          )}
+1000:        </div>
+1008:              <div className="w-full h-full bg-zinc-900/50" />
+1009:            </div>
+1012:              <div className="w-full h-full bg-[linear-gradient(rgba(63,63,70,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(63,63,70,0.1)_1px,transparent_1px)] [background-size:20px_20px]" />
+1013:            </div>
+1029:                />
+1031:            })}
+1041:            />
+1042:          </div>
+1043:        </div>
+1052:            <Wrench className="w-4 h-4" />
+1059:            <DollarSign className="w-4 h-4" />
+1071:            <Wind className="w-4 h-4" />
+1083:            <Users className="w-4 h-4" />
+1085:        </div>
+1094:            <Factory className="w-5 h-5" />
+1101:            <Shield className="w-5 h-5" />
+1108:            <Users className="w-5 h-5" />
+1115:            <Truck className="w-5 h-5" />
+1117:        </div>
+1123:            <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+1128:                style={{ height: `${Math.min(100, (gameState.power / Math.max(1, gameState.powerConsumption)) * 50)}%` }}
+1129:              />
+1134:              />
+1135:            </div>
+1139:            </div>
+1145:              </div>
+1146:            </div>
+1147:          </div>
+1164:            )}
+1168:                <BuildButton 
+1170:                  icon={<Zap className="w-5 h-5" />} 
+1174:                  locked={!engineRef.current.isUnlocked('POWER_PLANT', 'PLAYER')}
+1185:                />
+1186:                <BuildButton 
+1188:                  icon={<Shield className="w-5 h-5" />} 
+1192:                  locked={!engineRef.current.isUnlocked('BARRACKS', 'PLAYER')}
+1203:                />
+1204:                <BuildButton 
+1206:                  icon={<Coins className="w-5 h-5" />} 
+1210:                  locked={!engineRef.current.isUnlocked('ORE_REFINERY', 'PLAYER')}
+1221:                />
+1222:                <BuildButton 
+1224:                  icon={<Factory className="w-5 h-5" />} 
+1228:                  locked={!engineRef.current.isUnlocked('WAR_FACTORY', 'PLAYER')}
+1239:                />
+1240:                <BuildButton 
+1242:                  icon={<Radar className="w-5 h-5" />} 
+1246:                  locked={!engineRef.current.isUnlocked('RADAR', 'PLAYER')}
+1257:                />
+1258:                <BuildButton 
+1260:                  icon={<Wrench className="w-5 h-5" />} 
+1264:                  locked={!engineRef.current.isUnlocked('SERVICE_DEPOT', 'PLAYER')}
+1275:                />
+1276:                <BuildButton 
+1278:                  icon={<Activity className="w-5 h-5" />} 
+1282:                  locked={!engineRef.current.isUnlocked('BATTLE_LAB', 'PLAYER')}
+1293:                />
+1294:                <BuildButton 
+1296:                  icon={<Coins className="w-5 h-5 text-yellow-500" />} 
+1300:                  locked={!engineRef.current.isUnlocked('ORE_PURIFIER', 'PLAYER')}
+1311:                />
+1312:                <BuildButton 
+1314:                  icon={<Factory className="w-5 h-5" />} 
+1318:                  locked={!engineRef.current.isUnlocked('INDUSTRIAL_PLANT', 'PLAYER')}
+1329:                />
+1330:                <BuildButton 
+1332:                  icon={<Zap className="w-5 h-5 text-yellow-400" />} 
+1336:                  locked={!engineRef.current.isUnlocked('NUCLEAR_REACTOR', 'PLAYER')}
+1347:                />
+1348:                <BuildButton 
+1350:                  icon={<Activity className="w-5 h-5" />} 
+1354:                  locked={!engineRef.current.isUnlocked('PSYCHIC_SENSOR', 'PLAYER')}
+1365:                />
+1366:                <BuildButton 
+1368:                  icon={<Layers className="w-5 h-5" />} 
+1372:                  locked={!engineRef.current.isUnlocked('CLONING_VATS', 'PLAYER')}
+1383:                />
+1384:                <BuildButton 
+1386:                  icon={<Anchor className="w-5 h-5" />} 
+1390:                  locked={!engineRef.current.isUnlocked('NAVAL_YARD', 'PLAYER')}
+1401:                />
+1404:                <BuildButton 
+1406:                  icon={<Factory className="w-5 h-5 text-blue-400" />} 
+1410:                  locked={!engineRef.current.isUnlocked('ALLIED_CONSTRUCTION_YARD', 'PLAYER')}
+1421:                />
+1422:                <BuildButton 
+1424:                  icon={<Zap className="w-5 h-5 text-blue-400" />} 
+1428:                  locked={!engineRef.current.isUnlocked('ALLIED_POWER_PLANT', 'PLAYER')}
+1439:                />
+1440:                <BuildButton 
+1442:                  icon={<Users className="w-5 h-5 text-blue-400" />} 
+1446:                  locked={!engineRef.current.isUnlocked('ALLIED_BARRACKS', 'PLAYER')}
+1457:                />
+1458:                <BuildButton 
+1460:                  icon={<Truck className="w-5 h-5 text-blue-400" />} 
+1464:                  locked={!engineRef.current.isUnlocked('ALLIED_ORE_REFINERY', 'PLAYER')}
+1475:                />
+1476:                <BuildButton 
+1478:                  icon={<Wrench className="w-5 h-5 text-blue-400" />} 
+1482:                  locked={!engineRef.current.isUnlocked('ALLIED_WAR_FACTORY', 'PLAYER')}
+1493:                />
+1494:                <BuildButton 
+1496:                  icon={<Wind className="w-5 h-5 text-blue-400" />} 
+1500:                  locked={!engineRef.current.isUnlocked('AIR_FORCE_COMMAND', 'PLAYER')}
+1511:                />
+1512:                <BuildButton 
+1514:                  icon={<Activity className="w-5 h-5 text-blue-400" />} 
+1518:                  locked={!engineRef.current.isUnlocked('ALLIED_BATTLE_LAB', 'PLAYER')}
+1529:                />
+1530:                <BuildButton 
+1532:                  icon={<Activity className="w-5 h-5 text-blue-400" />} 
+1536:                  locked={!engineRef.current.isUnlocked('ALLIED_ORE_PURIFIER', 'PLAYER')}
+1547:                />
+1548:                <BuildButton 
+1550:                  icon={<Anchor className="w-5 h-5 text-blue-400" />} 
+1554:                  locked={!engineRef.current.isUnlocked('ALLIED_NAVAL_YARD', 'PLAYER')}
+1565:                />
+1566:                <BuildButton 
+1568:                  icon={<Zap className="w-5 h-5 text-purple-500" />} 
+1572:                  locked={!engineRef.current.isUnlocked('CHRONOSPHERE', 'PLAYER')}
+1583:                />
+1584:                <BuildButton 
+1586:                  icon={<Wind className="w-5 h-5 text-blue-600" />} 
+1590:                  locked={!engineRef.current.isUnlocked('WEATHER_DEVICE', 'PLAYER')}
+1601:                />
+1602:              </div>
+1603:            )}
+1607:                {selectedFaction === 'SOVIET' && (
+1609:                    <BuildButton 
+1611:                      icon={<Users className="w-4 h-4" />}
+1615:                      locked={!engineRef.current.isUnlocked('SOLDIER', 'PLAYER')}
+1616:                      onClick={() => engineRef.current.startProduction('SOLDIER')}
+1618:                    />
+1619:                <BuildButton 
+1621:                  icon={<Wrench className="w-4 h-4" />}
+1625:                  locked={!engineRef.current.isUnlocked('ENGINEER', 'PLAYER')}
+1626:                  onClick={() => engineRef.current.startProduction('ENGINEER')}
+1628:                />
+1629:                <BuildButton 
+1631:                  icon={<Activity className="w-4 h-4" />}
+1635:                  locked={!engineRef.current.isUnlocked('ATTACK_DOG', 'PLAYER')}
+1636:                  onClick={() => engineRef.current.startProduction('ATTACK_DOG')}
+1638:                />
+1639:                <BuildButton 
+1641:                  icon={<Crosshair className="w-4 h-4" />}
+1645:                  locked={!engineRef.current.isUnlocked('FLAK_TROOPER', 'PLAYER')}
+1646:                  onClick={() => engineRef.current.startProduction('FLAK_TROOPER')}
+1648:                />
+1649:                <BuildButton 
+1651:                  icon={<Zap className="w-4 h-4" />}
+1655:                  locked={!engineRef.current.isUnlocked('TESLA_TROOPER', 'PLAYER')}
+1656:                  onClick={() => engineRef.current.startProduction('TESLA_TROOPER')}
+1658:                />
+1659:                <BuildButton 
+1661:                  icon={<Skull className="w-4 h-4 text-red-500" />}
+1665:                  locked={!engineRef.current.isUnlocked('CRAZY_IVAN', 'PLAYER')}
+1666:                  onClick={() => engineRef.current.startProduction('CRAZY_IVAN')}
+1668:                />
+1669:                <BuildButton 
+1671:                  icon={<Target className="w-4 h-4 text-yellow-500" />}
+1675:                  locked={!engineRef.current.isUnlocked('BORIS', 'PLAYER')}
+1676:                  onClick={() => engineRef.current.startProduction('BORIS')}
+1678:                />
+1679:                <BuildButton 
+1681:                  icon={<Skull className="w-4 h-4 text-green-500" />}
+1685:                  locked={!engineRef.current.isUnlocked('DESOLATOR', 'PLAYER')}
+1686:                  onClick={() => engineRef.current.startProduction('DESOLATOR')}
+1688:                />
+1689:                <BuildButton 
+1691:                  icon={<Bomb className="w-4 h-4 text-orange-500" />}
+1695:                  locked={!engineRef.current.isUnlocked('TERRORIST', 'PLAYER')}
+1696:                  onClick={() => engineRef.current.startProduction('TERRORIST')}
+1698:                />
+1699:                <BuildButton 
+1701:                  icon={<Activity className="w-4 h-4 text-purple-500" />}
+1705:                  locked={!engineRef.current.isUnlocked('YURI', 'PLAYER')}
+1706:                  onClick={() => engineRef.current.startProduction('YURI')}
+1708:                />
+1709:                <BuildButton 
+1711:                  icon={<Activity className="w-4 h-4 text-purple-700" />}
+1715:                  locked={!engineRef.current.isUnlocked('YURI_PRIME', 'PLAYER')}
+1716:                  onClick={() => engineRef.current.startProduction('YURI_PRIME')}
+1718:                />
+1719:                </>
+1720:                )}
+1722:                {selectedFaction === 'ALLIED' && (
+1725:                <BuildButton 
+1727:                  icon={<User className="w-4 h-4 text-blue-500" />}
+1731:                  locked={!engineRef.current.isUnlocked('GI', 'PLAYER')}
+1732:                  onClick={() => engineRef.current.startProduction('GI')}
+1734:                />
+1735:                <BuildButton 
+1737:                  icon={<Wind className="w-4 h-4 text-blue-400" />}
+1741:                  locked={!engineRef.current.isUnlocked('ROCKETEER', 'PLAYER')}
+1742:                  onClick={() => engineRef.current.startProduction('ROCKETEER')}
+1744:                />
+1745:                <BuildButton 
+1747:                  icon={<Waves className="w-4 h-4 text-blue-600" />}
+1751:                  locked={!engineRef.current.isUnlocked('NAVY_SEAL', 'PLAYER')}
+1752:                  onClick={() => engineRef.current.startProduction('NAVY_SEAL')}
+1754:                />
+1755:                <BuildButton 
+1757:                  icon={<Zap className="w-4 h-4 text-purple-400" />}
+1761:                  locked={!engineRef.current.isUnlocked('CHRONO_LEGIONNAIRE', 'PLAYER')}
+1762:                  onClick={() => engineRef.current.startProduction('CHRONO_LEGIONNAIRE')}
+1764:                />
+1765:                <BuildButton 
+1767:                  icon={<User className="w-4 h-4 text-yellow-500" />}
+1771:                  locked={!engineRef.current.isUnlocked('TANYA', 'PLAYER')}
+1772:                  onClick={() => engineRef.current.startProduction('TANYA')}
+1774:                />
+1775:                <BuildButton 
+1777:                  icon={<User className="w-4 h-4 text-gray-500" />}
+1781:                  locked={!engineRef.current.isUnlocked('SPY', 'PLAYER')}
+1782:                  onClick={() => engineRef.current.startProduction('SPY')}
+1784:                />
+1785:                <BuildButton 
+1787:                  icon={<Crosshair className="w-4 h-4 text-zinc-400" />}
+1791:                  locked={!engineRef.current.isUnlocked('SNIPER', 'PLAYER')}
+1792:                  onClick={() => engineRef.current.startProduction('SNIPER')}
+1794:                />
+1795:                <BuildButton 
+1797:                  icon={<Zap className="w-4 h-4 text-red-400" />}
+1801:                  locked={!engineRef.current.isUnlocked('CHRONO_IVAN', 'PLAYER')}
+1802:                  onClick={() => engineRef.current.startProduction('CHRONO_IVAN')}
+1804:                />
+1805:                <BuildButton 
+1807:                  icon={<Zap className="w-4 h-4 text-blue-400" />}
+1811:                  locked={!engineRef.current.isUnlocked('CHRONO_COMMANDO', 'PLAYER')}
+1812:                  onClick={() => engineRef.current.startProduction('CHRONO_COMMANDO')}
+1814:                />
+1815:                <BuildButton 
+1817:                  icon={<Activity className="w-4 h-4 text-purple-400" />}
+1821:                  locked={!engineRef.current.isUnlocked('PSI_COMMANDO', 'PLAYER')}
+1822:                  onClick={() => engineRef.current.startProduction('PSI_COMMANDO')}
+1824:                />
+1825:                  </>
+1826:                )}
+1827:              </div>
+1828:            )}
+1832:                {selectedFaction === 'SOVIET' && (
+1834:                <BuildButton 
+1836:                  icon={<Truck className="w-4 h-4" />}
+1840:                  locked={!engineRef.current.isUnlocked('HARVESTER', 'PLAYER')}
+1841:                  onClick={() => engineRef.current.startProduction('HARVESTER')}
+1843:                />
+1844:                <BuildButton 
+1846:                  icon={<Target className="w-4 h-4" />}
+1850:                  locked={!engineRef.current.isUnlocked('TANK', 'PLAYER')}
+1851:                  onClick={() => engineRef.current.startProduction('TANK')}
+1853:                />
+1854:                <BuildButton 
+1856:                  icon={<Skull className="w-4 h-4" />}
+1860:                  locked={!engineRef.current.isUnlocked('TERROR_DRONE', 'PLAYER')}
+1861:                  onClick={() => engineRef.current.startProduction('TERROR_DRONE')}
+1863:                />
+1864:                <BuildButton 
+1866:                  icon={<Crosshair className="w-4 h-4" />}
+1870:                  locked={!engineRef.current.isUnlocked('V3_LAUNCHER', 'PLAYER')}
+1871:                  onClick={() => engineRef.current.startProduction('V3_LAUNCHER')}
+1873:                />
+1874:                <BuildButton 
+1876:                  icon={<Skull className="w-4 h-4 text-red-500" />}
+1880:                  locked={!engineRef.current.isUnlocked('APOCALYPSE_TANK', 'PLAYER')}
+1881:                  onClick={() => engineRef.current.startProduction('APOCALYPSE_TANK')}
+1883:                />
+1884:                <BuildButton 
+1886:                  icon={<Crosshair className="w-4 h-4" />}
+1890:                  locked={!engineRef.current.isUnlocked('FLAK_TRACK', 'PLAYER')}
+1891:                  onClick={() => engineRef.current.startProduction('FLAK_TRACK')}
+1893:                />
+1894:                <BuildButton 
+1896:                  icon={<Wind className="w-4 h-4" />}
+1900:                  locked={!engineRef.current.isUnlocked('KIROV_AIRSHIP', 'PLAYER')}
+1901:                  onClick={() => engineRef.current.startProduction('KIROV_AIRSHIP')}
+1903:                />
+1904:                <BuildButton 
+1906:                  icon={<Truck className="w-4 h-4 text-yellow-500" />}
+1910:                  locked={!engineRef.current.isUnlocked('MCV', 'PLAYER')}
+1911:                  onClick={() => engineRef.current.startProduction('MCV')}
+1913:                />
+1914:                <BuildButton 
+1916:                  icon={<Bomb className="w-4 h-4 text-orange-500" />}
+1920:                  locked={!engineRef.current.isUnlocked('DEMOLITION_TRUCK', 'PLAYER')}
+1921:                  onClick={() => engineRef.current.startProduction('DEMOLITION_TRUCK')}
+1923:                />
+1924:                <BuildButton 
+1926:                  icon={<Zap className="w-4 h-4 text-blue-400" />}
+1930:                  locked={!engineRef.current.isUnlocked('TESLA_TANK', 'PLAYER')}
+1931:                  onClick={() => engineRef.current.startProduction('TESLA_TANK')}
+1933:                />
+1934:                <BuildButton 
+1936:                  icon={<Wind className="w-4 h-4 text-zinc-400" />}
+1940:                  locked={!engineRef.current.isUnlocked('SIEGE_CHOPPER', 'PLAYER')}
+1941:                  onClick={() => engineRef.current.startProduction('SIEGE_CHOPPER')}
+1943:                />
+1944:                <BuildButton 
+1946:                  icon={<Waves className="w-4 h-4 text-blue-600" />}
+1950:                  locked={!engineRef.current.isUnlocked('TYPHOON_SUB', 'PLAYER')}
+1951:                  onClick={() => engineRef.current.startProduction('TYPHOON_SUB')}
+1953:                />
+1954:                <BuildButton 
+1956:                  icon={<Crosshair className="w-4 h-4 text-blue-400" />}
+1960:                  locked={!engineRef.current.isUnlocked('SEA_SCORPION', 'PLAYER')}
+1961:                  onClick={() => engineRef.current.startProduction('SEA_SCORPION')}
+1963:                />
+1964:                <BuildButton 
+1966:                  icon={<Activity className="w-4 h-4 text-pink-500" />}
+1970:                  locked={!engineRef.current.isUnlocked('GIANT_SQUID', 'PLAYER')}
+1971:                  onClick={() => engineRef.current.startProduction('GIANT_SQUID')}
+1973:                />
+1974:                <BuildButton 
+1976:                  icon={<Target className="w-4 h-4 text-red-600" />}
+1980:                  locked={!engineRef.current.isUnlocked('DREADNOUGHT', 'PLAYER')}
+1981:                  onClick={() => engineRef.current.startProduction('DREADNOUGHT')}
+1983:                />
+1984:                <BuildButton 
+1986:                  icon={<Waves className="w-4 h-4 text-zinc-400" />}
+1990:                  locked={!engineRef.current.isUnlocked('HOVER_TRANSPORT', 'PLAYER')}
+1991:                  onClick={() => engineRef.current.startProduction('HOVER_TRANSPORT')}
+1993:                />
+1994:                  </>
+1995:                )}
+1997:                {selectedFaction === 'ALLIED' && (
+2000:                <BuildButton 
+2002:                  icon={<Car className="w-4 h-4 text-blue-500" />}
+2006:                  locked={!engineRef.current.isUnlocked('GRIZZLY_TANK', 'PLAYER')}
+2007:                  onClick={() => engineRef.current.startProduction('GRIZZLY_TANK')}
+2009:                />
+2010:                <BuildButton 
+2012:                  icon={<Car className="w-4 h-4 text-blue-400" />}
+2016:                  locked={!engineRef.current.isUnlocked('IFV', 'PLAYER')}
+2017:                  onClick={() => engineRef.current.startProduction('IFV')}
+2019:                />
+2020:                <BuildButton 
+2022:                  icon={<Target className="w-4 h-4 text-red-500" />}
+2026:                  locked={!engineRef.current.isUnlocked('TANK_DESTROYER', 'PLAYER')}
+2027:                  onClick={() => engineRef.current.startProduction('TANK_DESTROYER')}
+2029:                />
+2030:                <BuildButton 
+2032:                  icon={<Car className="w-4 h-4 text-green-500" />}
+2036:                  locked={!engineRef.current.isUnlocked('MIRAGE_TANK', 'PLAYER')}
+2037:                  onClick={() => engineRef.current.startProduction('MIRAGE_TANK')}
+2039:                />
+2040:                <BuildButton 
+2042:                  icon={<Zap className="w-4 h-4 text-blue-300" />}
+2046:                  locked={!engineRef.current.isUnlocked('PRISM_TANK', 'PLAYER')}
+2047:                  onClick={() => engineRef.current.startProduction('PRISM_TANK')}
+2049:                />
+2050:                <BuildButton 
+2052:                  icon={<Car className="w-4 h-4 text-zinc-400" />}
+2056:                  locked={!engineRef.current.isUnlocked('ROBOT_TANK', 'PLAYER')}
+2057:                  onClick={() => engineRef.current.startProduction('ROBOT_TANK')}
+2059:                />
+2060:                <BuildButton 
+2062:                  icon={<Shield className="w-4 h-4 text-blue-600" />}
+2066:                  locked={!engineRef.current.isUnlocked('BATTLE_FORTRESS', 'PLAYER')}
+2067:                  onClick={() => engineRef.current.startProduction('BATTLE_FORTRESS')}
+2069:                />
+2070:                <BuildButton 
+2072:                  icon={<Truck className="w-4 h-4 text-blue-300" />}
+2076:                  locked={!engineRef.current.isUnlocked('CHRONO_MINER', 'PLAYER')}
+2077:                  onClick={() => engineRef.current.startProduction('CHRONO_MINER')}
+2079:                />
+2080:                <BuildButton 
+2082:                  icon={<Waves className="w-4 h-4 text-blue-400" />}
+2086:                  locked={!engineRef.current.isUnlocked('AMPHIBIOUS_TRANSPORT', 'PLAYER')}
+2087:                  onClick={() => engineRef.current.startProduction('AMPHIBIOUS_TRANSPORT')}
+2089:                />
+2090:                <BuildButton 
+2092:                  icon={<Target className="w-4 h-4 text-blue-500" />}
+2096:                  locked={!engineRef.current.isUnlocked('DESTROYER', 'PLAYER')}
+2097:                  onClick={() => engineRef.current.startProduction('DESTROYER')}
+2099:                />
+2100:                <BuildButton 
+2102:                  icon={<Crosshair className="w-4 h-4 text-blue-300" />}
+2106:                  locked={!engineRef.current.isUnlocked('AEGIS_CRUISER', 'PLAYER')}
+2107:                  onClick={() => engineRef.current.startProduction('AEGIS_CRUISER')}
+2109:                />
+2110:                <BuildButton 
+2112:                  icon={<Wind className="w-4 h-4 text-blue-600" />}
+2116:                  locked={!engineRef.current.isUnlocked('AIRCRAFT_CARRIER', 'PLAYER')}
+2117:                  onClick={() => engineRef.current.startProduction('AIRCRAFT_CARRIER')}
+2119:                />
+2120:                <BuildButton 
+2122:                  icon={<Activity className="w-4 h-4 text-blue-200" />}
+2126:                  locked={!engineRef.current.isUnlocked('DOLPHIN', 'PLAYER')}
+2127:                  onClick={() => engineRef.current.startProduction('DOLPHIN')}
+2129:                />
+2130:                <BuildButton 
+2132:                  icon={<Wind className="w-4 h-4 text-blue-400" />}
+2136:                  locked={!engineRef.current.isUnlocked('HARRIER', 'PLAYER')}
+2137:                  onClick={() => engineRef.current.startProduction('HARRIER')}
+2139:                />
+2140:                <BuildButton 
+2142:                  icon={<Wind className="w-4 h-4 text-zinc-800" />}
+2146:                  locked={!engineRef.current.isUnlocked('BLACK_EAGLE', 'PLAYER')}
+2147:                  onClick={() => engineRef.current.startProduction('BLACK_EAGLE')}
+2149:                />
+2150:                <BuildButton 
+2152:                  icon={<Truck className="w-4 h-4 text-zinc-600" />}
+2156:                  locked={!engineRef.current.isUnlocked('NIGHT_HAWK_TRANSPORT', 'PLAYER')}
+2157:                  onClick={() => engineRef.current.startProduction('NIGHT_HAWK_TRANSPORT')}
+2159:                />
+2160:                  </>
+2161:                )}
+2162:              </div>
+2163:            )}
+2167:                <BuildButton 
+2169:                  icon={<Shield className="w-5 h-5" />} 
+2173:                  locked={!engineRef.current.isUnlocked('SENTRY_GUN', 'PLAYER')}
+2184:                />
+2185:                <BuildButton 
+2187:                  icon={<Crosshair className="w-5 h-5" />} 
+2191:                  locked={!engineRef.current.isUnlocked('FLAK_CANNON', 'PLAYER')}
+2202:                />
+2203:                <BuildButton 
+2205:                  icon={<Zap className="w-5 h-5" />} 
+2209:                  locked={!engineRef.current.isUnlocked('TESLA_COIL', 'PLAYER')}
+2220:                />
+2221:                <BuildButton 
+2223:                  icon={<ShieldAlert className="w-5 h-5" />} 
+2227:                  locked={!engineRef.current.isUnlocked('IRON_CURTAIN', 'PLAYER')}
+2238:                />
+2239:                <BuildButton 
+2241:                  icon={<Bomb className="w-5 h-5" />} 
+2245:                  locked={!engineRef.current.isUnlocked('NUCLEAR_SILO', 'PLAYER')}
+2256:                />
+2257:                <BuildButton 
+2259:                  icon={<Radar className="w-5 h-5" />} 
+2263:                  locked={!engineRef.current.isUnlocked('PSYCHIC_SENSOR', 'PLAYER')}
+2274:                />
+2275:                <BuildButton 
+2277:                  icon={<Square className="w-5 h-5" />} 
+2281:                  locked={!engineRef.current.isUnlocked('SOVIET_WALL', 'PLAYER')}
+2292:                />
+2293:                <BuildButton 
+2295:                  icon={<Shield className="w-5 h-5" />} 
+2299:                  locked={!engineRef.current.isUnlocked('BATTLE_BUNKER', 'PLAYER')}
+2310:                />
+2313:                <BuildButton 
+2315:                  icon={<Shield className="w-5 h-5 text-blue-500" />} 
+2319:                  locked={!engineRef.current.isUnlocked('PILLBOX', 'PLAYER')}
+2330:                />
+2331:                <BuildButton 
+2333:                  icon={<Crosshair className="w-5 h-5 text-blue-400" />} 
+2337:                  locked={!engineRef.current.isUnlocked('PATRIOT_MISSILE', 'PLAYER')}
+2348:                />
+2349:                <BuildButton 
+2351:                  icon={<Zap className="w-5 h-5 text-blue-300" />} 
+2355:                  locked={!engineRef.current.isUnlocked('PRISM_TOWER', 'PLAYER')}
+2366:                />
+2367:                <BuildButton 
+2369:                  icon={<Target className="w-5 h-5 text-blue-600" />} 
+2373:                  locked={!engineRef.current.isUnlocked('GRAND_CANNON', 'PLAYER')}
+2384:                />
+2385:                <BuildButton 
+2387:                  icon={<Wind className="w-5 h-5 text-blue-800" />} 
+2391:                  locked={!engineRef.current.isUnlocked('GAP_GENERATOR', 'PLAYER')}
+2402:                />
+2403:                <BuildButton 
+2405:                  icon={<Square className="w-5 h-5 text-blue-400" />} 
+2409:                  locked={!engineRef.current.isUnlocked('ALLIED_WALL', 'PLAYER')}
+2420:                />
+2421:                <BuildButton 
+2423:                  icon={<Zap className="w-5 h-5 text-purple-500" />} 
+2427:                  locked={!engineRef.current.isUnlocked('CHRONOSPHERE', 'PLAYER')}
+2438:                />
+2439:                <BuildButton 
+2441:                  icon={<Wind className="w-5 h-5 text-blue-600" />} 
+2445:                  locked={!engineRef.current.isUnlocked('WEATHER_DEVICE', 'PLAYER')}
+2456:                />
+2457:              </div>
+2458:            )}
+2459:          </div>
+2460:        </div>
+2461:      </div>
+2475:        </div>
+2476:      )}
+2485:              onClick={() => window.location.reload()}
+2490:          </div>
+2491:        </div>
+2492:      )}
+2493:        </>
+2494:      )}
+2495:    </div>
+2526:      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:8px_8px]" />
+2533:        />
+2534:      )}
+2538:        <div className="absolute inset-0 bg-zinc-700/30 pointer-events-none z-20" />
+2539:      )}
+2544:          <Lock className="w-6 h-6 text-zinc-600" />
+2545:        </div>
+2546:      )}
+2550:        {icon || <Factory className="w-6 h-6" />}
+2551:      </div>
+2558:      </div>
+2565:      </div>
+2571:        </div>
+2572:      )}
+2578:            {Math.floor(progress)}%
+2580:        </div>
+2581:      )}
+2593:          )}
+2598:          )}
+2603:          )}
+2604:        </div>
+2605:      )}
+2609:        <div className="absolute inset-0 border-2 border-zinc-600 z-50 pointer-events-none" />
+2610:      )}
